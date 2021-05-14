@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../widgets/textanimation.dart';
 import 'zodiacscreen.dart';
+import '../models/daysofweek.dart';
+
+
 class HomeScreen extends StatefulWidget {
 
   static String routeName = '/';
@@ -24,14 +27,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SlideFadeTransition(
-                    child: Text('Date : 13-05-2021',style: TextStyle(
+                    child: Text('Date : ${DateTime.now().day}-${DateTime.now().month}-${DateTime.now().year}',style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
                       color: Colors.white,
                     ),),
                   ),
                   SlideFadeTransition(
-                    child: Text('Day : Thursday',style: TextStyle(
+                    child: Text('Day : ${days.values[DateTime.now().weekday-1].toString().split('.')[1]}',style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
                       color: Colors.white,
@@ -86,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Center(
                           child: Container(
                             child: Material(
+                              animationDuration: Duration(seconds: 2),
                               child: InkWell(
                                 onTap: (){
                                   Navigator.of(context).pushNamed(ZodiacSymbolsPage.routeName);

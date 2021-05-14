@@ -33,7 +33,7 @@ class SlideFadeTransition extends StatefulWidget {
     this.curve = Curves.easeIn,
     this.direction = Direction.vertical,
     this.delayStart = const Duration(seconds: 0),
-    this.animationDuration = const Duration(milliseconds: 800),
+    this.animationDuration = const Duration(milliseconds: 900),
   });
   @override
   _SlideFadeTransitionState createState() => _SlideFadeTransitionState();
