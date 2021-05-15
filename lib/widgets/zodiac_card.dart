@@ -48,7 +48,7 @@ class ZodiacSymbol extends StatelessWidget {
               ),
 
               width: 0.41*MediaQuery.of(context).size.width,
-              height: 0.25*MediaQuery.of(context).size.height,
+              height: 0.3*MediaQuery.of(context).size.height,
             ),
           ),
         ),

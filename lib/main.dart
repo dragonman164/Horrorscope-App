@@ -3,6 +3,7 @@ import 'screens/loadingscreen.dart';
 import 'screens/homescreen.dart';
 import 'screens/zodiacscreen.dart';
 import 'screens/zodiacfortunescreen.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +12,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp(
       title: 'Raashi Fal',
     theme: ThemeData(

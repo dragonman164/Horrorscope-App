@@ -25,7 +25,7 @@ class ZodiacFortuneScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(0.01*MediaQuery.of(context).size.height),
                 margin:EdgeInsets.all(0.02*MediaQuery.of(context).size.height),
-                height: 0.25*MediaQuery.of(context).size.height,
+                height: 0.3*MediaQuery.of(context).size.height,
                 width: 0.45*MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
